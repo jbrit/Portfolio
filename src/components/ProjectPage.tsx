@@ -2,21 +2,20 @@ import React, { ReactElement } from "react";
 import ProjectCard from "./ProjectCard";
 
 const projects: Array<{
-  githubName: string;
+  githubName?: string;
   liveLink?: string;
   children: Array<string>;
   stack: Array<string>;
 }> = [
   {
-    githubName: "portfolio",
-    liveLink: "https://jbritz.netlify.app/",
+    liveLink: "https://pdvote.herokuapp.com/",
     children: ["PureDev", "Polling", "Platform."],
     stack: ["Django", "HTML", "CSS", "JS"],
   },
   {
-    githubName: "USSD-API",
+    githubName: "USSD-Application",
     children: ["USSD API."],
-    stack: ["Django", "HTML"],
+    stack: ["Django"],
   },
   {
     githubName: "Portfolio",
@@ -25,20 +24,18 @@ const projects: Array<{
     stack: ["React", "TS"],
   },
   {
-    githubName: "Creative-Coming-Soon",
-    liveLink: "https://nutri-fi.netlify.app/",
-    children: ["Nutri-Fi", "Coming Soon", "Page."],
-    stack: ["HTML", "CSS", "JS", "GSAP"],
+    githubName: "Mail-API",
+    children: "Mail API.".split(" "),
+    stack: ["Django", "DRF"],
   },
   {
-    githubName: "Music",
-    liveLink: "https://musicport.netlify.app/",
-    children: "Music Artiste Portfolio.".split(" "),
-    stack: ["HTML", "CSS", "JS"],
+    githubName: "Iykee-Creative-Portfolio",
+    liveLink: "https://iykee.netlify.app/",
+    children: "Iykee Creative Portfolio.".split(" "),
+    stack: ["HTML", "SCSS", "Vue", "GSAP"],
   },
   {
-    githubName: "seogrid",
-    liveLink: "https://musicport.netlify.app/",
+    liveLink: "https://seo-dashboard.netlify.app/",
     children: "SEO Grid Campaign Dashboard.".split(" "),
     stack: ["HTML", "SCSS", "JS"],
   },
@@ -65,7 +62,10 @@ const ProjectPage: React.FC = ({}) => {
           </ProjectCard>
         ))}
       </div>
-      <button className="bg-blue-500 block mt-10 mx-auto hover:bg-blue-700 text-base font-medium text-white py-2 px-8 rounded uppercase select-none">
+      <button
+        onClick={() => window.open("https://github.com/jbrit/")}
+        className="bg-blue-500 block mt-10 mx-auto hover:bg-blue-700 text-base font-medium text-white py-2 px-8 rounded uppercase focus:outline-none select-none"
+      >
         See More
       </button>
     </div>
