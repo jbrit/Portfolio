@@ -16,7 +16,7 @@ const SkillsPage: React.FC = ({}) => {
     <div className="pt-10 md:pt-20 relative mb-20">
       <div className="uppercase font-light text-2xl mb-3">Skills</div>
       <div className=" font-medium text-4xl mb-16">What I can use</div>
-      <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
         {skills.map(({ name, iconProp }, idx) => (
           <div
             key={idx}
