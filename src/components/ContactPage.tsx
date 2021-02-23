@@ -3,12 +3,30 @@ import { ReactComponent as Linkedin } from "../assets/img/sc-linkedin.svg";
 import { ReactComponent as Phone } from "../assets/img/sc-phone.svg";
 import { ReactComponent as Twitter } from "../assets/img/sc-twitter.svg";
 import { ReactComponent as Mail } from "../assets/img/sc-mail.svg";
+import { validateForm } from "./utils";
 
 const ContactPage: React.FC = ({}) => {
   const [status, setStatus] = useState("");
+  const [error, setError] = useState("");
+
   const formRef = useRef<HTMLFormElement>(null);
+  const nameRef = useRef<HTMLInputElement>(null);
+  const emailRef = useRef<HTMLInputElement>(null);
+  const messageRef = useRef<HTMLTextAreaElement>(null);
+
   const handlesubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    const errors = validateForm([
+      nameRef.current,
+      emailRef.current,
+      messageRef.current,
+    ]);
+    if (errors.length) {
+      setError(errors[0]);
+      return;
+    }
+    setError("");
+
     const form: HTMLFormElement = formRef.current!;
     const data = new FormData(form);
     const xhr = new XMLHttpRequest();
@@ -30,9 +48,10 @@ const ContactPage: React.FC = ({}) => {
   return (
     <div className="pt-10 md:pt-20 relative mb-20">
       <div className="uppercase font-light text-2xl mb-3">Contact Me</div>
-      <div className=" font-medium text-4xl mb-16">Let's have a chat!</div>
+      <div className=" font-medium text-4xl mb-10">Let's have a chat!</div>
       <div className="grid md:grid-cols-2 gap-10 lg:gap-20">
         <div className="form-holder">
+          <div className="error h-6 text-red-300 mb-3">{error}</div>
           <form
             method="POST"
             action="https://formspree.io/f/mzbkqqbn"
@@ -49,6 +68,7 @@ const ContactPage: React.FC = ({}) => {
                 name="name"
                 placeholder="Full Name"
                 type="text"
+                ref={nameRef}
               />
             </div>
             <div className="form-group mb-6">
@@ -60,7 +80,8 @@ const ContactPage: React.FC = ({}) => {
                 id="email"
                 name="email"
                 placeholder="Email Address"
-                type="text"
+                type="email"
+                ref={emailRef}
               />
             </div>
             <div className="form-group mb-6">
@@ -73,6 +94,7 @@ const ContactPage: React.FC = ({}) => {
                 id="message"
                 name="message"
                 rows={6}
+                ref={messageRef}
                 // Work on fized size
               ></textarea>
             </div>
