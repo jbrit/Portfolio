@@ -14,6 +14,19 @@ const HomePage: React.FC = ({}) => {
       duration: 0.7,
       stagger: 0.1,
     }).to(".hireBtn", { opacity: 1 });
+
+    gsap.fromTo(
+      ".scroller",
+      {
+        "--scrollHeight": "-100%",
+      },
+      {
+        "--scrollHeight": "100%",
+        duration: 2,
+        repeat: -1,
+        yoyo: true,
+      }
+    );
   });
   return (
     <div className="pt-10 md:pt-20 relative mb-20">
@@ -63,7 +76,7 @@ const HomePage: React.FC = ({}) => {
       >
         <span
           style={{ height: "1px" }}
-          className="scroller bg-white w-20 mr-2 self-center relative"
+          className="scroller bg-white w-20 mr-2 self-center relative block overflow-hidden"
         ></span>
         <span className="text-xl font-light">Scroll</span>
       </span>

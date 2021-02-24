@@ -50,3 +50,16 @@ textarea:focus {
   height: var(--slideHeight);
   width: 100%;
 }
+.scroller {
+  --scrollHeight: 0%;
+}
+.scroller::after {
+  content: "";
+  position: absolute;
+  background-color: #26292e;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transform: translateX(var(--scrollHeight));
+}
