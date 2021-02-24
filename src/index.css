@@ -34,3 +34,19 @@ textarea:focus {
 .project-card:hover::after {
   transform: translateY(0%);
 }
+
+.slide-in {
+  display: inline-block;
+  position: relative;
+  transform: translateY(100%);
+  --slideHeight: 100%;
+}
+.slide-in::after {
+  content: "";
+  position: absolute;
+  background-color: #26292e;
+  bottom: 0;
+  left: 0;
+  height: var(--slideHeight);
+  width: 100%;
+}

@@ -1,4 +1,5 @@
-import React from "react";
+import gsap from "gsap";
+import React, { useEffect } from "react";
 
 interface TagProps {
   name: string;
@@ -8,11 +9,18 @@ interface TagProps {
 }
 
 const Tag: React.FC<TagProps> = ({ name, className, closing }) => {
+  useEffect(() => {
+    gsap.fromTo(
+      ".tag",
+      { opacity: "0", duration: 1 },
+      { opacity: "0.5", delay: 1 }
+    );
+  }, []);
   return (
     <span
       className={
         (!closing ? "block" : "inline-block") +
-        " italic opacity-50 select-none font-light" +
+        " italic opacity-0 select-none font-light tag  overflow-hidden h-6" +
         " " +
         className
       }
