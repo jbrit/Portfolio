@@ -3,7 +3,7 @@ import { ReactComponent as Linkedin } from "../assets/img/sc-linkedin.svg";
 import { ReactComponent as Phone } from "../assets/img/sc-phone.svg";
 import { ReactComponent as Twitter } from "../assets/img/sc-twitter.svg";
 import { ReactComponent as Mail } from "../assets/img/sc-mail.svg";
-import { validateForm } from "./utils";
+import { validateForm } from "../components/utils";
 
 const ContactPage: React.FC = ({}) => {
   const [status, setStatus] = useState("");
@@ -46,7 +46,7 @@ const ContactPage: React.FC = ({}) => {
   };
 
   return (
-    <div className="pt-10 md:pt-20 relative mb-20">
+    <div id="contactSection" className="pt-10 md:pt-20 relative mb-20">
       <div className="uppercase font-light text-2xl mb-3">Contact Me</div>
       <div className=" font-medium text-4xl mb-10">Let's have a chat!</div>
       <div className="grid md:grid-cols-2 gap-10 lg:gap-20">
@@ -127,7 +127,7 @@ const ContactPage: React.FC = ({}) => {
             </a>
             <a
               target="__blank"
-              href="https://twitter.com/ajibola_ojo_/"
+              href="https://twitter.com/jibolaojo/"
               className="flex items-center tracking-wide mr-6 mb-6"
             >
               <Twitter className="mr-4 flex-none" />

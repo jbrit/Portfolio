@@ -51,7 +51,7 @@ const HomePage: React.FC = ({}) => {
       <div className="mb-4">
         <Tag name="h4" />
         <span className="slide-in text-2xl text-blue-500 uppercase mr-1.5 font-medium">
-          FullStack Developer + Student
+          FullStack Developer
         </span>
         <Tag name="h4" closing />
       </div>
@@ -64,9 +64,12 @@ const HomePage: React.FC = ({}) => {
           <Tag name="p" className="ml-1.5" closing />
         </p>
       </div>
-      <button className="bg-blue-500 opacity-0 hireBtn hover:bg-blue-700 focus:outline-none text-base font-medium text-white py-2 px-10 rounded uppercase select-none">
+      <a
+        href="#contactSection"
+        className="bg-blue-500 opacity-0 hireBtn hover:bg-blue-700 focus:outline-none text-base font-medium text-white py-2 px-10 rounded uppercase select-none"
+      >
         Hire Me
-      </button>
+      </a>
       <Tag name="body" className="mt-10" />
 
       <span

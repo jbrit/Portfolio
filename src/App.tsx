@@ -1,10 +1,10 @@
 import React from "react";
 import Header from "./components/Header";
-import HomePage from "./components/HomePage";
+import HomePage from "./pages/HomePage";
 import PageContainer from "./components/PageContainer";
-import ProjectPage from "./components/ProjectPage";
-import SkillsPage from "./components/SkillsPage";
-import ContactPage from "./components/ContactPage";
+import ProjectPage from "./pages/ProjectPage";
+import SkillsPage from "./pages/SkillsPage";
+import ContactPage from "./pages/ContactPage";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {
   faCss3,

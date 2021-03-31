@@ -1,5 +1,5 @@
 import React, { ReactElement } from "react";
-import ProjectCard from "./ProjectCard";
+import ProjectCard from "../components/ProjectCard";
 
 const projects: Array<{
   githubName?: string;
@@ -9,8 +9,9 @@ const projects: Array<{
 }> = [
   {
     githubName: "raffle",
+    liveLink: "http://www.ralphbrooke.com/",
     children: "RalphBrooke Raffle Draw.".split(" "),
-    stack: ["Django"],
+    stack: ["Django", "HTML", "CSS", "JS"],
   },
   {
     githubName: "Iykee-Creative-Portfolio",
