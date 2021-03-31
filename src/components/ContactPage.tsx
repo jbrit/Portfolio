@@ -132,7 +132,7 @@ const ContactPage: React.FC = ({}) => {
             >
               <Twitter className="mr-4 flex-none" />
               <span className="text-blue-300">
-                https://twitter.com/ajibola_ojo_/
+                https://twitter.com/jibolaojo/
               </span>
             </a>
             <a

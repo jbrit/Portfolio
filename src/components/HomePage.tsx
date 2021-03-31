@@ -1,7 +1,6 @@
 import gsap from "gsap";
 import React, { useEffect, useRef } from "react";
 import Tag from "../components/Tag";
-import { PRIMARY_COLOR } from "../constants";
 
 const HomePage: React.FC = ({}) => {
   const slideRef = useRef(null);
@@ -72,7 +71,7 @@ const HomePage: React.FC = ({}) => {
 
       <span
         style={{ bottom: "100px", right: 0, transform: "rotate(90deg)" }}
-        className="inline-block absolute  uppercase flex"
+        className="hidden md:flex absolute  uppercase"
       >
         <span
           style={{ height: "1px" }}

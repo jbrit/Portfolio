@@ -8,14 +8,15 @@ const projects: Array<{
   stack: Array<string>;
 }> = [
   {
-    liveLink: "https://pdvote.herokuapp.com/",
-    children: ["PureDev", "Polling", "Platform."],
-    stack: ["Django", "HTML", "CSS", "JS"],
+    githubName: "raffle",
+    children: "RalphBrooke Raffle Draw.".split(" "),
+    stack: ["Django"],
   },
   {
-    githubName: "USSD-Application",
-    children: ["USSD API."],
-    stack: ["Django"],
+    githubName: "Iykee-Creative-Portfolio",
+    liveLink: "https://iykee.netlify.app/",
+    children: "Iykee Creative Portfolio.".split(" "),
+    stack: ["HTML", "SCSS", "Vue", "GSAP"],
   },
   {
     githubName: "Portfolio",
@@ -24,15 +25,14 @@ const projects: Array<{
     stack: ["React", "TS"],
   },
   {
-    githubName: "Mail-API",
-    children: "Mail API.".split(" "),
-    stack: ["Django", "DRF"],
+    liveLink: "https://pdvote.herokuapp.com/",
+    children: ["PureDev", "Polling", "Platform."],
+    stack: ["Django", "HTML", "CSS", "JS"],
   },
   {
-    githubName: "Iykee-Creative-Portfolio",
-    liveLink: "https://iykee.netlify.app/",
-    children: "Iykee Creative Portfolio.".split(" "),
-    stack: ["HTML", "SCSS", "Vue", "GSAP"],
+    githubName: "USSD-Application",
+    children: ["USSD API."],
+    stack: ["Django"],
   },
   {
     liveLink: "https://seo-dashboard.netlify.app/",

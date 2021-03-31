@@ -11,7 +11,7 @@ const Header: React.FC = ({}) => {
       <Logo />
       <div className="ml-auto social-icons flex">
         <SocialIcon href="https://linkedin.com/in/ajibolaojo" Icon={Linkedin} />
-        <SocialIcon href="https://twitter.com/ajibola_ojo_/" Icon={Twitter} />
+        <SocialIcon href="https://twitter.com/jibolaojo/" Icon={Twitter} />
         <SocialIcon href="tel: +2347050424927" Icon={Phone} />
       </div>
     </div>
