@@ -21,7 +21,6 @@ const projects: Array<{
   },
   {
     githubName: "Portfolio",
-    liveLink: "https://jbritz.netlify.app/",
     children: ["My Portfolio."],
     stack: ["React", "TS"],
   },

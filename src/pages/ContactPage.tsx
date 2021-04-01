@@ -116,7 +116,7 @@ const ContactPage: React.FC = ({}) => {
               <Phone className="mr-4 flex-none" /> +234 705 042 4927
             </a>
             <a
-              target="__blank"
+              target="_blank"
               href="https://linkedin.com/in/ajibolaojo/"
               className="flex items-center tracking-wide mr-6 mb-6"
             >
@@ -126,7 +126,7 @@ const ContactPage: React.FC = ({}) => {
               </span>
             </a>
             <a
-              target="__blank"
+              target="_blank"
               href="https://twitter.com/jibolaojo/"
               className="flex items-center tracking-wide mr-6 mb-6"
             >

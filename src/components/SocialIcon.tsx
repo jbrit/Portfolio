@@ -8,7 +8,7 @@ interface SocialIconProps {
 
 const SocialIcon: React.FC<SocialIconProps> = ({ href, Icon, className }) => {
   return (
-    <a target="__blank" className={className ?? "mx-3"} href={href}>
+    <a target="_blank" className={className ?? "mx-3"} href={href}>
       <Icon />
     </a>
   );
