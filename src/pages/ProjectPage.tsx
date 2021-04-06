@@ -8,7 +8,7 @@ const projects: Array<{
   stack: Array<string>;
 }> = [
   {
-    githubName: "raffle",
+    // githubName: "raffle",
     liveLink: "http://www.ralphbrooke.com/",
     children: "RalphBrooke Raffle Draw.".split(" "),
     stack: ["Django", "HTML", "CSS", "JS"],
@@ -25,7 +25,8 @@ const projects: Array<{
     stack: ["React", "TS"],
   },
   {
-    liveLink: "https://pdvote.herokuapp.com/",
+    githubName: "pdpolls",
+    liveLink: "https://pdpolls.herokuapp.com/",
     children: ["PureDev", "Polling", "Platform."],
     stack: ["Django", "HTML", "CSS", "JS"],
   },
